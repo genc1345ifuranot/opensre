@@ -19,27 +19,14 @@ from dataclasses import dataclass, field
 from rich.console import Console
 from rich.text import Text
 
-# ─────────────────────────────────────────────────────────────────────────────
-# Environment
-# ─────────────────────────────────────────────────────────────────────────────
-
-_CI_VARS = ("CI", "GITHUB_ACTIONS", "GITLAB_CI", "JENKINS_URL", "BUILDKITE")
-
 
 def get_output_format() -> str:
     """Return 'rich' for interactive TTY, 'text' otherwise."""
     if fmt := os.getenv("TRACER_OUTPUT_FORMAT"):
         return fmt
-    if any(os.getenv(v) for v in _CI_VARS):
-        return "text"
     if os.getenv("SLACK_WEBHOOK_URL"):
         return "text"
     return "rich" if sys.stdout.isatty() else "text"
-
-
-# ─────────────────────────────────────────────────────────────────────────────
-# ANSI helpers
-# ─────────────────────────────────────────────────────────────────────────────
 
 _RESET = "\033[0m"
 _DIM   = "\033[2m"
