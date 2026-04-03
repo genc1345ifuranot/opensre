@@ -132,7 +132,7 @@ When an alert fires, Tracer automatically:
 
 ## Integrations
 
-Tracer integrates with the systems that power modern data platforms.
+Tracer integrates with the systems that power modern cloud platforms.
 
 | Category           | Integrations                                                                                                                                                                                                                                                   |
 | ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
