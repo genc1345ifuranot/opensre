@@ -362,6 +362,15 @@ Thanks goes to these amazing people:
         </a>
     </td>
 		</tr>
+		<tr>
+            <td align="center">
+        <a href="https://github.com/Abhinnavverma">
+            <img src="https://avatars.githubusercontent.com/u/138097198?v=4" width="100;" alt="Abhinnavverma"/>
+            <br />
+            <sub><b>Abhinnavverma</b></sub>
+        </a>
+    </td>
+		</tr>
 	</tbody>
 </table>
 <!-- readme: contributors -end -->
