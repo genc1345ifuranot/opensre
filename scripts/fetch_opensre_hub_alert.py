@@ -17,7 +17,7 @@ Examples::
   # First 20 alerts under a directory
   python scripts/fetch_opensre_hub_alert.py --prefix Bank/query_alerts --export-dir ./bank_alerts --limit 20
 
-  # Valid prefixes on w3joe/opensre include:
+  # Valid prefixes on tracer-cloud/opensre include:
   #   Bank/query_alerts  Market/cloudbed-1/query_alerts  Market/cloudbed-2/query_alerts
   #   Telecom/query_alerts
 """

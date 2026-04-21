@@ -1,4 +1,4 @@
-"""Merge w3joe/opensre CSV telemetry into resolved Grafana integrations."""
+"""Merge tracer-cloud/opensre CSV telemetry into resolved Grafana integrations."""
 
 from __future__ import annotations
 
@@ -18,7 +18,7 @@ def _annotation_dict(raw_alert: dict[str, Any]) -> dict[str, Any]:
 
 
 def _dataset_root(ann: dict[str, Any], raw_alert: dict[str, Any]) -> str:
-    """Resolve local clone root for w3joe/opensre (or OpenRCA-style exports)."""
+    """Resolve local clone root for tracer-cloud/opensre (or OpenRCA-style exports)."""
     for key in (
         "opensre_dataset_root",
         "openrca_dataset_root",

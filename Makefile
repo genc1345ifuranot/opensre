@@ -48,9 +48,9 @@ investigate-alert:
 	@[ -n "$(ALERT)" ] || { echo "Usage: make investigate-alert ALERT=/path/to/alert.json"; exit 1; }
 	opensre investigate --input "$(ALERT)"
 
-# Fetch first alert from Hugging Face w3joe/opensre (needs Hub extra + network).
+# Fetch first alert from Hugging Face tracer-cloud/opensre (needs Hub extra + network).
 # OPENSRE_QUERY_PREFIX=Telecom/query_alerts make opensre-hub-fetch
-# OPENSRE_HF_DATASET_ID=w3joe/opensre is optional (same default as the app).
+# OPENSRE_HF_DATASET_ID=tracer-cloud/opensre is optional (same default as the app).
 OPENSRE_HUB_ALERT ?= /tmp/opensre-hub-alert.json
 OPENSRE_QUERY_PREFIX ?= Market/cloudbed-1/query_alerts
 # 0-based: second alert => OPENSRE_HUB_INDEX=1

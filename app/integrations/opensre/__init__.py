@@ -1,4 +1,4 @@
-"""Local telemetry from the w3joe/opensre Hugging Face dataset (OpenRCA-style CSVs)."""
+"""Local telemetry from the tracer-cloud/opensre Hugging Face dataset (OpenRCA-style CSVs)."""
 
 from __future__ import annotations
 

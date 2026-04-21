@@ -12,7 +12,7 @@ Examples::
     --relative Market/cloudbed-1/telemetry/2022_03_20 list
 
   # Materialize only that folder from Hugging Face (needs: pip install huggingface_hub)
-  export OPENSRE_HF_DATASET_ID=w3joe/opensre
+  export OPENSRE_HF_DATASET_ID=tracer-cloud/opensre
   python scripts/query_opensre_telemetry.py \\
     --relative Market/cloudbed-1/telemetry/2022_03_20 \\
     --from-hub list

@@ -1,6 +1,6 @@
-# OpenRCA / w3joe/opensre benchmarks (Hub-only)
+# OpenSRE / tracer-cloud/opensre benchmarks (Hub-only)
 
-Scenario alerts and telemetry live on the Hugging Face dataset **[w3joe/opensre](https://huggingface.co/datasets/w3joe/opensre)** — they are **not** copied into this repository.
+Scenario alerts and telemetry live on the Hugging Face dataset **[tracer-cloud/opensre](https://huggingface.co/datasets/tracer-cloud/opensre)** — they are **not** copied into this repository.
 
 ## Install Hub helpers
 
@@ -27,7 +27,7 @@ for alert in stream_opensre_query_alerts(
 Telemetry CSVs are downloaded **on first use** into `~/.cache/opensre/hf/` (override with `OPENSRE_HF_CACHE`). Set:
 
 ```bash
-export OPENSRE_HF_DATASET_ID=w3joe/opensre
+export OPENSRE_HF_DATASET_ID=tracer-cloud/opensre
 ```
 
 OpenSRE resolves `openrca_telemetry_relative` when present; otherwise it **infers** `Market/.../telemetry/YYYY_MM_DD` from the alert text. Disable inference with `OPENSRE_INFER_TELEMETRY=0`.
@@ -57,7 +57,7 @@ Streaming order is whatever the Hugging Face `datasets` glob returns for that pr
 Download one alert JSON to a temp file:
 
 ```bash
-export OPENSRE_HF_DATASET_ID=w3joe/opensre
+export OPENSRE_HF_DATASET_ID=tracer-cloud/opensre
 python - <<'PY'
 import json, tempfile, pathlib
 from app.integrations.opensre import stream_opensre_query_alerts
@@ -86,7 +86,7 @@ The **`opensre_llm_eval`** object is included in the investigation JSON on **std
 If you prefer a single `git lfs`-free folder instead of streaming + partial snapshots:
 
 ```bash
-huggingface-cli download w3joe/opensre --repo-type dataset --local-dir ~/data/w3joe-opensre
+huggingface-cli download tracer-cloud/opensre --repo-type dataset --local-dir ~/data/w3joe-opensre
 export OPENSRE_DATASET_ROOT="$HOME/data/w3joe-opensre"
 # alerts: use JSON files under e.g. Market/cloudbed-1/query_alerts/
 ```
