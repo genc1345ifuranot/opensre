@@ -133,7 +133,7 @@ opensre remote ops --provider railway --project <project> --service <service> lo
 opensre remote ops --provider railway --project <project> --service <service> restart --yes
 ```
 
-OpenSRE saves your last used `provider`/`project`/`service`, so you can run:
+OpenSRE saves your last used `provider`, so you can run:
 
 ```bash
 opensre remote ops status
@@ -654,6 +654,34 @@ Thanks goes to these amazing people:
             <img src="https://avatars.githubusercontent.com/u/177292922?v=4" width="100" alt="daxp472"/>
             <br />
             <sub><b>daxp472</b></sub>
+        </a>
+    </td>
+            <td align="center">
+        <a href="https://github.com/Som-0619">
+            <img src="https://avatars.githubusercontent.com/u/143019791?v=4" width="100" alt="Som-0619"/>
+            <br />
+            <sub><b>Som-0619</b></sub>
+        </a>
+    </td>
+            <td align="center">
+        <a href="https://github.com/Gust-svg">
+            <img src="https://avatars.githubusercontent.com/u/265007695?v=4" width="100" alt="Gust-svg"/>
+            <br />
+            <sub><b>Gust-svg</b></sub>
+        </a>
+    </td>
+            <td align="center">
+        <a href="https://github.com/Sayeem3051">
+            <img src="https://avatars.githubusercontent.com/u/169171880?v=4" width="100" alt="Sayeem3051"/>
+            <br />
+            <sub><b>Sayeem3051</b></sub>
+        </a>
+    </td>
+            <td align="center">
+        <a href="https://github.com/MachineLearning-Nerd">
+            <img src="https://avatars.githubusercontent.com/u/37579156?v=4" width="100" alt="MachineLearning-Nerd"/>
+            <br />
+            <sub><b>MachineLearning-Nerd</b></sub>
         </a>
     </td>
 		</tr>
