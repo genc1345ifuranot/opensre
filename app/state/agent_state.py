@@ -105,6 +105,11 @@ class AgentState(TypedDict, total=False):
     problem_report: dict[str, Any]
     report: str
 
+    # OpenRCA offline rubric eval (``opensre investigate --evaluate``)
+    opensre_evaluate: bool
+    opensre_eval_rubric: str
+    opensre_llm_eval: dict[str, Any]
+
 
 InvestigationState = AgentState
 
@@ -165,3 +170,6 @@ class AgentStateModel(StrictConfigModel):
     summary: str = ""
     problem_report: dict[str, Any] = Field(default_factory=dict)
     report: str = ""
+    opensre_evaluate: bool = False
+    opensre_eval_rubric: str = ""
+    opensre_llm_eval: dict[str, Any] = Field(default_factory=dict)
