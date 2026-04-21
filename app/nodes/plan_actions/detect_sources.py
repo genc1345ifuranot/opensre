@@ -10,9 +10,9 @@ from datetime import UTC, datetime, timedelta
 from typing import Any
 from urllib.parse import urlparse
 
+from app.integrations.azure_sql import DEFAULT_AZURE_SQL_PORT
 from app.integrations.opensre.csv_grafana_backend import OpenSRECsvGrafanaBackend
 from app.integrations.opensre.inject import inject_opensre_into_resolved_integrations
-from app.integrations.azure_sql import DEFAULT_AZURE_SQL_PORT
 from app.services.coralogix import build_coralogix_logs_query
 from app.tools.GrafanaLogsTool import _map_pipeline_to_service_name
 
