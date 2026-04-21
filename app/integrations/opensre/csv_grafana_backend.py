@@ -181,8 +181,10 @@ class OpenSRECsvGrafanaBackend:
                         continue
                 ts_raw = row.get(ts_key, "") if ts_key else ""
                 parsed = _parse_ts(ts_raw) if ts_raw else None
-                iso = _iso_from_ts(parsed) if parsed is not None else _iso_from_ts(
-                    datetime.now(tz=UTC).timestamp()
+                iso = (
+                    _iso_from_ts(parsed)
+                    if parsed is not None
+                    else _iso_from_ts(datetime.now(tz=UTC).timestamp())
                 )
                 parts = [f"{k}={v}" for k, v in row.items() if v and k != ts_key]
                 message = " | ".join(parts) if parts else str(row)
@@ -240,7 +242,9 @@ class OpenSRECsvGrafanaBackend:
             )
 
             for row in rows:
-                tid = (row.get(tid_col, "singleton") if tid_col else "singleton").strip() or "singleton"
+                tid = (
+                    row.get(tid_col, "singleton") if tid_col else "singleton"
+                ).strip() or "singleton"
                 op = (row.get(name_col, "span") if name_col else "span").strip() or "span"
                 sname = (row.get(svc_col, "service") if svc_col else "service").strip() or "service"
                 if svc and svc not in sname.lower() and svc not in op.lower():

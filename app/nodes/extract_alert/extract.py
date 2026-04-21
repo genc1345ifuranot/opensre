@@ -40,9 +40,7 @@ def _alert_dict_needs_full_json_for_llm(raw_alert: dict[str, Any]) -> bool:
             if ann.get(key):
                 return True
     meta = raw_alert.get("_meta")
-    return bool(
-        isinstance(meta, dict) and "openrca" in str(meta.get("purpose", "")).lower()
-    )
+    return bool(isinstance(meta, dict) and "openrca" in str(meta.get("purpose", "")).lower())
 
 
 def extract_alert_details(state: InvestigationState) -> AlertDetails:
