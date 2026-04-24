@@ -8,6 +8,7 @@ See individual submodules for component-level documentation.
 
 Personal fork notes:
 - Experimenting with custom step execution strategies
+- Added version constant for easier tracking against upstream
 - See README for local setup instructions
 """
 
@@ -15,8 +16,12 @@ from opensre.core.registry import ToolRegistry
 from opensre.core.graph import StepGraph
 from opensre.core.runner import PipelineRunner
 
+# Track which upstream version this fork is based on
+FORK_BASE_VERSION = "0.3.1"
+
 __all__ = [
     "ToolRegistry",
     "StepGraph",
     "PipelineRunner",
+    "FORK_BASE_VERSION",
 ]
