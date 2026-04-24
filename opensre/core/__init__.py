@@ -5,6 +5,10 @@ including the graph engine, tool registry, and step execution pipeline.
 
 Note: Forked from Tracer-Cloud/opensre for personal learning/experimentation.
 See individual submodules for component-level documentation.
+
+Personal fork notes:
+- Experimenting with custom step execution strategies
+- See README for local setup instructions
 """
 
 from opensre.core.registry import ToolRegistry
