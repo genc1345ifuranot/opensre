@@ -32,8 +32,9 @@ FORK_AUTHOR = "mwatkins-dev"
 FORK_LOG_PREFIX = f"[opensre-fork/{FORK_AUTHOR}]"
 
 # Whether to enable verbose debug logging by default.
-# Set to True locally to help trace step execution during experiments.
-FORK_DEBUG = False
+# Turned on while actively experimenting with step execution -- remember to
+# flip this back to False before sharing any patches upstream.
+FORK_DEBUG = True
 
 __all__ = [
     "ToolRegistry",
