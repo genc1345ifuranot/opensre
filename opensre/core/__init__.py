@@ -25,7 +25,12 @@ FORK_BASE_VERSION = "0.3.1"
 UPSTREAM_REPO = "https://github.com/Tracer-Cloud/opensre"
 
 # Identify this fork in logs or debug output
+# TODO: change to actual username once I decide on a consistent handle
 FORK_AUTHOR = "personal"
+
+# Default log prefix used when this fork emits debug/info messages.
+# Makes it easy to grep for fork-specific output in mixed logs.
+FORK_LOG_PREFIX = f"[opensre-fork/{FORK_AUTHOR}]"
 
 __all__ = [
     "ToolRegistry",
@@ -34,4 +39,5 @@ __all__ = [
     "FORK_BASE_VERSION",
     "UPSTREAM_REPO",
     "FORK_AUTHOR",
+    "FORK_LOG_PREFIX",
 ]
