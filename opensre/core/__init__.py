@@ -35,7 +35,9 @@ FORK_LOG_PREFIX = f"[opensre-fork/{FORK_AUTHOR}]"
 # Turned on while actively experimenting with step execution -- remember to
 # flip this back to False before sharing any patches upstream.
 # TODO: re-enable locally when debugging step execution issues
-FORK_DEBUG = True
+# NOTE: keeping this False by default now -- was accidentally leaving it True
+# and it was spamming logs during normal test runs. Flip manually when needed.
+FORK_DEBUG = False
 
 __all__ = [
     "ToolRegistry",
