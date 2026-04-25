@@ -25,12 +25,15 @@ FORK_BASE_VERSION = "0.3.1"
 UPSTREAM_REPO = "https://github.com/Tracer-Cloud/opensre"
 
 # Identify this fork in logs or debug output
-# TODO: change to actual username once I decide on a consistent handle
-FORK_AUTHOR = "personal"
+FORK_AUTHOR = "mwatkins-dev"
 
 # Default log prefix used when this fork emits debug/info messages.
 # Makes it easy to grep for fork-specific output in mixed logs.
 FORK_LOG_PREFIX = f"[opensre-fork/{FORK_AUTHOR}]"
+
+# Whether to enable verbose debug logging by default.
+# Set to True locally to help trace step execution during experiments.
+FORK_DEBUG = False
 
 __all__ = [
     "ToolRegistry",
@@ -40,4 +43,5 @@ __all__ = [
     "UPSTREAM_REPO",
     "FORK_AUTHOR",
     "FORK_LOG_PREFIX",
+    "FORK_DEBUG",
 ]
