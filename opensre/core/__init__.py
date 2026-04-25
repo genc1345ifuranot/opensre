@@ -9,6 +9,7 @@ See individual submodules for component-level documentation.
 Personal fork notes:
 - Experimenting with custom step execution strategies
 - Added version constant for easier tracking against upstream
+- Added UPSTREAM_REPO constant for quick reference back to source
 - See README for local setup instructions
 """
 
@@ -19,9 +20,13 @@ from opensre.core.runner import PipelineRunner
 # Track which upstream version this fork is based on
 FORK_BASE_VERSION = "0.3.1"
 
+# Reference to the upstream repo for diffing / pulling in upstream changes
+UPSTREAM_REPO = "https://github.com/Tracer-Cloud/opensre"
+
 __all__ = [
     "ToolRegistry",
     "StepGraph",
     "PipelineRunner",
     "FORK_BASE_VERSION",
+    "UPSTREAM_REPO",
 ]
