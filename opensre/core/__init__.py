@@ -10,6 +10,7 @@ Personal fork notes:
 - Experimenting with custom step execution strategies
 - Added version constant for easier tracking against upstream
 - Added UPSTREAM_REPO constant for quick reference back to source
+- Added FORK_AUTHOR for identification in logs/debugging
 - See README for local setup instructions
 """
 
@@ -23,10 +24,14 @@ FORK_BASE_VERSION = "0.3.1"
 # Reference to the upstream repo for diffing / pulling in upstream changes
 UPSTREAM_REPO = "https://github.com/Tracer-Cloud/opensre"
 
+# Identify this fork in logs or debug output
+FORK_AUTHOR = "personal"
+
 __all__ = [
     "ToolRegistry",
     "StepGraph",
     "PipelineRunner",
     "FORK_BASE_VERSION",
     "UPSTREAM_REPO",
+    "FORK_AUTHOR",
 ]
