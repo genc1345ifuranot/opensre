@@ -34,7 +34,8 @@ FORK_LOG_PREFIX = f"[opensre-fork/{FORK_AUTHOR}]"
 # Whether to enable verbose debug logging by default.
 # Turned on while actively experimenting with step execution -- remember to
 # flip this back to False before sharing any patches upstream.
-FORK_DEBUG = True
+# TODO: flipped back to False for now; re-enable locally when needed
+FORK_DEBUG = False
 
 __all__ = [
     "ToolRegistry",
