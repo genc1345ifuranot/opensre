@@ -39,6 +39,12 @@ FORK_LOG_PREFIX = f"[opensre-fork/{FORK_AUTHOR}]"
 # and it was spamming logs during normal test runs. Flip manually when needed.
 FORK_DEBUG = False
 
+# Convenience shorthand for checking if we're running in a local dev environment.
+# Useful for conditionally enabling extra assertions or verbose output in tests
+# without touching FORK_DEBUG globally.
+# Usage: if FORK_DEV_MODE: print(f"{FORK_LOG_PREFIX} extra detail here")
+FORK_DEV_MODE = False
+
 __all__ = [
     "ToolRegistry",
     "StepGraph",
@@ -48,4 +54,5 @@ __all__ = [
     "FORK_AUTHOR",
     "FORK_LOG_PREFIX",
     "FORK_DEBUG",
+    "FORK_DEV_MODE",
 ]
