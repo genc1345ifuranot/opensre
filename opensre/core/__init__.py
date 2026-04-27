@@ -45,8 +45,15 @@ FORK_DEBUG = False
 # Usage: if FORK_DEV_MODE: print(f"{FORK_LOG_PREFIX} extra detail here")
 # NOTE: switched to checking the env var so I don't have to edit this file
 # every time I switch between dev and normal runs. Set OPENSRE_DEV=1 locally.
+# Also support OPENSRE_DEBUG as an alias for FORK_DEBUG so I can toggle both
+# at once from the environment without editing source.
 import os
 FORK_DEV_MODE = os.environ.get("OPENSRE_DEV", "0") == "1"
+
+# Allow overriding FORK_DEBUG via env var as well, consistent with FORK_DEV_MODE.
+# e.g. OPENSRE_DEBUG=1 python -m pytest to get verbose fork output in one shot.
+if os.environ.get("OPENSRE_DEBUG", "0") == "1":
+    FORK_DEBUG = True
 
 __all__ = [
     "ToolRegistry",
